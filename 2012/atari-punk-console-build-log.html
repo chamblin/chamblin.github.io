@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Atari Punk Console Build Log | cory chamblin</title>
+  <meta name="author" content="Cory Chamblin">
+  <meta name="description" content="Writings about computer science
+                                    and hobbies by Cory Chamblin">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52771183-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <style>
+    .wrap {
+    width: 90%;
+    max-width: 768px;
+    }
+  </style>
+</head>
+<body>
+	<h1>Atari Punk Console Build Log</h1>
+        <h3><a href="/">Cory Chamblin</a></h3>
+        <main class="wrap">
+	<h2 id="day-1">Day 1</h2>
+
+<p>After finishing up the Weird Sound Generator, I decided to pick up a few more circuit skills.  The Atari Punk Console seems appropriate.  It is a very simple tone square wave generator designed mostly by Forrest Mims and adapted later with a line-level output.</p>
+
+<p>I am working mostly from the plans here: <a href="http://www.robthefiddler.com/electronics-audio-diy/circuit-experiments/atari-punk-console/%22%20title=%22http://www.robthefiddler.com/electronics-audio-diy/circuit-experiments/atari-punk-console/">http://www.robthefiddler.com/electronics-audio-diy/circuit-experiments/atari-punk-console/</a> and various other electronics and synth people blogs.</p>
+
+<p>This differs from the Weird Sound Generator in a few ways:</p>
+
+<ul>
+<li>The information I have is more vast but way more distributed.  Thankfully I don&#39;t need very much because</li>
+<li>This project is MUCH simpler.  After staring at one for a while, I understand how 555s work thanks to using them for several things in my learning with Make: Electronics.</li>
+<li>However, I will have to design and etch my own PCB for this project.
+That last one is the real reason for doing this.  I have another project coming up that&#39;s going to require that I make my own PCBs.  While several places have Atari Punk Console PCBs for sale for very reasonable prices, I would have had to forego the excellent learning opportunity to learn Cadsoft&#39;s EAGLE package.</li>
+</ul>
+
+<p>All the parts from Jameco set me back about $12.  Here is my <a href="https://docs.google.com/spreadsheet/pub?hl=en_US&amp;amp;hl=en_US&amp;amp;key=0AhrhA3zi0AHidFBHelVEUG0tWHFpci03QVozeC0talE&amp;amp;single=true&amp;amp;gid=3&amp;amp;output=html%22%20title=%22order%20worksheet%22%20target=%22_blank">order worksheet</a>.  This is assuming you have a collection of cheap electrolytic and ceramic capacitors and resistors from China.  Also some nice thin wire (I use 22 awg) for the panel work.  Otherwise, you will need to get those as well.  I ordered with it a bunch of other stuff to save on shipping.  Because the parts are so light, you want to get as much as possible together.</p>
+
+<p>It wouldn&#39;t be me if I didn&#39;t forget a few parts.  I didn&#39;t actually order the knobs or the power switch, so I had to kick them up from somewhere.  I still haven&#39;t found knobs, but they&#39;re a luxury anyway.  I&#39;m sure I&#39;ll pick some up on my next order.</p>
+
+<p>I picked up a bunch of 4&quot;x6&quot; copper clad sheets from eBay for etching for about $10.  <a href="http://www.instructables.com/id/Stop-using-Ferric-Chloride-etchant!--A-better-etc/%22%20title=%22This%20phenomenal%20Instructable%22%20target=%22_blank">This phenomenal Instructable</a> shows you how to use muriatic acid and hydrogen peroxide to etch copper without using ferric chloride.  That&#39;s what I&#39;ll be trying first when I get to that step.</p>
+
+<p>So here is the circuit I have printed out to refer to.</p>
+
+<p><img src="../a/i/2012/apc/schematic.jpg" alt="Schematic of the Atari Punk Console"></p>
+
+<p>I decided to breadboard this out since it&#39;s so simple.  That way I can test my parts and ensure my circuit diagram is good.  Plus I really don&#39;t want to build my first  PCB and have the whole thing fail for some reason that I could have caught in testing.</p>
+
+<p>So here&#39;s my parts laid out.  I use this 6-section storage box when I&#39;m working on things to help me keep it organized and allow me to neatly put it away when I get sick of it.</p>
+
+<p><img src="../a/i/2012/apc/6495324367_88c43871fb.jpg" alt=""></p>
+
+<p>I built myself a mock front panel from a piece of cardboard so I&#39;d have something to wire a breadboard to.</p>
+
+<p><img src="../a/i/2012/apc/6495324853_1c7598bbea.jpg" alt="">
+Here&#39;s the circuit fully wired up.  It only took about 15 minutes.  And I got satisfying screeches out of it.  And other horrible noises on account of the pots not being grounded, because cardboard is a terrible conductor.</p>
+
+<p><img src="../a/i/2012/apc/6495325343_7031ccb7eb.jpg" alt=""></p>
+
+<h2 id="day-2">Day 2</h2>
+
+<p>This &quot;day 2&quot; is really just a catchup of 10-15 minute sessions I&#39;ve put into this since Christmas or so.</p>
+
+<p>After breadboarding the circuit, the next step is to design and etch a printed circuit board (PCB) for it.  CadSoft EAGLE is the obvious choice among hobbyists, and I was happy to learn it.  </p>
+
+<p>I used a lot of resources to get an idea of what I&#39;m doing.  I&#39;m not very good at it, but I&#39;m definitely good enough for this project.  This is what I referred to:</p>
+
+<ul>
+<li><a href="http://www.instructables.com/id/Turn-your-EAGLE-schematic-into-a-PCB/%22%20title=%22http://www.instructables.com/id/Turn-your-EAGLE-schematic-into-a-PCB/">http://www.instructables.com/id/Turn-your-EAGLE-schematic-into-a-PCB/</a></li>
+<li><a href="http://www.instructables.com/id/Make-hobbyist-PCBs-with-professional-CAD-tools-by-/%22%20title=%22http://www.instructables.com/id/Make-hobbyist-PCBs-with-professional-CAD-tools-by-/">http://www.instructables.com/id/Make-hobbyist-PCBs-with-professional-CAD-tools-by-/</a></li>
+<li><a href="http://www.youtube.com/watch?v=qG0O9LKH-_E%22%20title=%22http://www.youtube.com/watch?v=qG0O9LKH-_E">http://www.youtube.com/watch?v=qG0O9LKH-_E</a>
+One thing that I would note is that I had to print out large versions of my circuit and then compare them to a reference schematic to make sure I did things right.  More care in the schematic-design part of EAGLE would have helped some.</li>
+</ul>
+
+<p><img src="../a/i/2012/apc/6697045895_222ea7972c.jpg" alt=""></p>
+
+<p><img src="../a/i/2012/apc/6697046279_2a7d61e02e.jpg" alt=""></p>
+
+<p>After a couple iterations, I think I have the circuit correct now.  On to cutting up my PCB.  Here, I have scored it with a hobby knife.  I&#39;m not sure what to do next, suggestions for cutting PCBs abound.  I&#39;ll need some tools, for sure.</p>
+
+<p><img src="../a/i/2012/apc/6697046719_c06503be35.jpg" alt=""></p>
+
+<h2 id="day-3">Day 3</h2>
+
+<p>This morning was etching morning, at long last.  I had to buy a bunch of materials, but etching is one of those kinds of things where you spend $50 on supplies and you&#39;ll have more than you&#39;ll ever need.</p>
+
+<p>At first, I was going to try the Ferric Chloride etchants, but they wear out and proper disposal is a huge problem.  Ultimately, I went with the hydrochloric (muriatic) acid + hydrogen peroxide reusable stuff recommended in <a href="http://www.instructables.com/id/Stop-using-Ferric-Chloride-etchant!--A-better-etc/?ALLSTEPS%22%20title=%22this%20instructable">this instructable</a> and <a href="http://hackaday.com/2008/07/28/how-to-etch-a-single-sided-pcb/%22%20title=%22this%20hackaday%20article">this hackaday article</a>.</p>
+
+<p>I had never etched anything before so I was very careful to follow steps and maybe overkilled it a little bit.</p>
+
+<p>First, I had to cut my board down to size.  There are lots of suggestions for what the proper tool for cutting copper clad board is.  In my case, I went with tin-snips.  They worked better than I thought they would, and they&#39;ll take a long time to wear out.</p>
+
+<p><img src="../a/i/2012/apc/6702543277_328c6f37e1.jpg" alt=""></p>
+
+<p>I cut a couple of these 2x2 squares out of my 4x6 sheet.</p>
+
+<p>After this, you have to print the circuit on some kind of paper.  I went with some paper from a cheap catalog.  Some suggest that you should use only white paper with black print because the ink can be a problem.  I tried an almost solid black sheet and it worked out ok, but I did get more ink on the board.  The etchant took care of it.  The white paper worked fine also.  I was concerned that the ink may be a problem.  Ultimately, I found that this is much easier than you would expect and that it is not at all rocket science.</p>
+
+<p><img src="../a/i/2012/apc/6702531425_bce7624582.jpg" alt=""></p>
+
+<p>At this point, you just cut it to fit and throw it under an iron on high for about 5 minutes like the instructable says.  Then I put it in water for about 10 minutes, and it peel right off, leaving the toner on the copper.  It&#39;s that easy.</p>
+
+<p>After that, you mix up the muriatic acid (1 part) to the hydrogen peroxide (2 parts) and stick it in a tub.  I did it outside.  You&#39;ll want to wear gloves, and while it&#39;s going, I brushed it down with one of those cheap foam paintbrushes.  The copper starts turning brown and the etchant starts turning green, and eventually, all the copper is gone!</p>
+
+<p><img src="../a/i/2012/apc/6702533531_f04aebcbb4.jpg" alt=""></p>
+
+<p><img src="../a/i/2012/apc/6702546037_18ffd74e29.jpg" alt=""></p>
+
+<p><img src="../a/i/2012/apc/6702542519_33fdb5d09e.jpg" alt=""></p>
+
+<p>Then it&#39;s just a matter of rinsing the board off in water.</p>
+
+<p><img src="../a/i/2012/apc/6702537747_1443f5e84c.jpg" alt=""></p>
+
+<p>And, once the acid is all gone, you can wipe off the toner with acetone.</p>
+
+<p><img src="../a/i/2012/apc/6702538533_71a6392252.jpg" alt=""></p>
+
+<p>And that&#39;s it!  You can dump the etchant into a non-metallic bottle and reuse it over and over again.  Be careful around metal!</p>
+
+<h2 id="day-4">Day 4</h2>
+
+<p>I bought a great set of #66 drill bits from <a href="http://drillcity.stores.yahoo.net/">Drill Bit City</a> for about $13.  I used a friend&#39;s drill press to drill my PCB out, and though I missed some holes, I believe the board will still work.</p>
+
+<p><img src="../a/i/2012/apc/6752602757_daab663389.jpg" alt=""></p>
+
+<p>I also got the components stuffed into it.  There are 6, so this is not exactly a challenge.</p>
+
+<p><img src="../a/i/2012/apc/6752601901_d248fc289c.jpg" alt=""></p>
+
+<p>Onward to the case.  I&#39;m essentially using the same pattern as I used to build my Weird Sound Generator case, and this one will match its height so I can use some leftover steel stock.  I made the mechanical layout for the case so far.</p>
+
+<p><img src="../a/i/2012/apc/6752602409_b65de812b0.jpg" alt=""></p>
+
+<h2 id="day-5">Day 5</h2>
+
+<p>So I got around to cutting out a new faceplate.  I used some of my leftover steel sheet from the Weird Sound Generator.  And almost all of the elements from that faceplate.</p>
+
+<p>First, I cut out a 3x6 hunk of steel:</p>
+
+<p><img src="../a/i/2012/apc/6768634705_66a0144d71.jpg" alt=""></p>
+
+<p>Then, I attached my mechanical diagram to it with masking tape, and punched all the center dots with a concrete screw and hammer.  Then I drilled it out.</p>
+
+<p><img src="../a/i/2012/apc/6768635535_3fd6c8066d.jpg" alt=""></p>
+
+<p>Test fit stuff.</p>
+
+<p><img src="../a/i/2012/apc/6768635833_5948562ef9.jpg" alt=""></p>
+
+<p>Cleaned up the mechanical diagram to turn it into the actual faceplate.  Added labels and such.</p>
+
+<p><img src="../a/i/2012/apc/6768636113_4ee8dddbfe.jpg" alt=""></p>
+
+<p>The great thing about the nuts that are going to hold on my switches, pots, and jacks is that they&#39;ll cover up all of these horrible mistakes.</p>
+
+<p><img src="../a/i/2012/apc/6768636731_b0d503f0ac.jpg" alt=""></p>
+
+<p>Sending this with my wife to laminate tomorrow.  Hopefully I&#39;ll get it glued on this weekend and get a chance to start on the case.</p>
+
+<h2 id="day-6">Day 6</h2>
+
+<p>I&#39;m still waiting on getting my panel cover laminated.  So while I wait on that, I decided to get some of the case stuff done.</p>
+
+<p><img src="../a/i/2012/apc/6784782113_dbf9090b4a.jpg" alt=""></p>
+
+<p>I made a mounting tab for the board out of a PCI slot cover.  I&#39;m going to mount this to the back of the front panel and hopefully that&#39;ll clean up a bit of the wiring.</p>
+
+<p><img src="../a/i/2012/apc/6784780489_4086fba315.jpg" alt=""></p>
+
+<p>Mounted here, with JB Weld</p>
+
+<p><img src="../a/i/2012/apc/6784781323_7676475c86.jpg" alt=""></p>
+
+<p>The case pieces are cut out here.  I don&#39;t have as much allowance as I did on the Weird Sound Generator, so I may be filing down the sides of my front panel to get this to fit.</p>
+
+<h2 id="day-7">Day 7</h2>
+
+<p>Got the faceplate cover laminated.</p>
+
+<p><img src="../a/i/2012/apc/6795514841_977c14b6ff.jpg" alt=""></p>
+
+<p>Here it is, glued on.</p>
+
+<p><img src="../a/i/2012/apc/6795514353_c8a9b35f77.jpg" alt=""></p>
+
+<p>All wired up here.  Initially, I had planned to make this really neat and organized.  That fell apart.  Also note that when I was gluing the faceplate on, I managed to break my board-holding bracket off.</p>
+
+<p><img src="../a/i/2012/apc/6795513605_6a126ae256.jpg" alt=""></p>
+
+<p>Here is a front view.  I need to pick up some knobs for it.</p>
+
+<p>The good news is that this actually worked on the first try.  The bad news is I&#39;m pretty sure all my pots are wired backwards.</p>
+
+<p><object height="81" width="100%">
+<param name="movie" value="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F35074809" /><param name="allowscriptaccess" value="always" /></object>
+<a href="http://soundcloud.com/chamblin/atari-punk-console-sample">Atari Punk Console Sample</a> by <a href="http://soundcloud.com/chamblin">chamblin</a></p>
+
+<h2 id="day-8">Day 8</h2>
+
+<p>Debugging detour.</p>
+
+<p>As I mentioned in my previous post, all my pots were wired backwards.  Also, my volume wasn&#39;t doing anything really.</p>
+
+<p>So I&#39;ve spent a few hours tearing this apart and clipping and moving connections around with test leads, and I&#39;ve come to the conclusion that I am missing some electronics fundamentals somewhere.</p>
+
+<p><img src="../a/i/2012/apc/6809599743_38a6d049af.jpg" alt=""></p>
+
+<p>Ultimately, I switched the pots to the other pole.  For the volume, I ended up shunting between the low side of the output and ground.  The result is that there are about 10 degrees of &quot;quiet volume&quot; and the rest of the pot is &quot;loud volume.&quot;  What in particular causes this eludes me but something must be leaking to the plate.  Whatever that something is, it has bested my multimeter and my effort, so I&#39;m just settling for this as it is now.</p>
+
+<p>If you are following along at home, you may need to try some totally different pot.  I don&#39;t have much variety and my 2Ks weren&#39;t doing it, either.</p>
+
+<p>This weekend I&#39;ll try assembling the case so I can move on with my life.</p>
+
+<h2 id="day-9">Day 9</h2>
+
+<p>So I&#39;m assembling the case over this weekend. Pilot holes drilled in my pieces, screwed together haphazardly.</p>
+
+<p><img src="../a/i/2012/apc/6825474669_78c61163d4.jpg" alt=""></p>
+
+<p>It didn&#39;t really fit at first, but there was a tiny bit of overlay from the faceplate cover and I shaved it off. Now the plate fits with no filing or other big hassles.</p>
+
+<p>I cut my posts out of 1/2&quot; square rod and attached them with wood glue. The top ones were clamped in to dry.</p>
+
+<p><img src="../a/i/2012/apc/6825476407_6f48a7ba71.jpg" alt=""></p>
+
+<p>I stained it (poorly) and attached the APC itself with some screws.</p>
+
+<p><img src="../a/i/2012/apc/6858755547_2efb11be2f.jpg" alt=""></p>
+
+<p>Once again, I don&#39;t have a proper back for this thing, so I&#39;m just going to go without one for the time being.  Also, I don&#39;t have screws small enough to hold the battery holder in place, so that&#39;s also being foregone.  The back is something I&#39;ll go without for a while as I won&#39;t have any need for paneling.  The battery screws I might pick up next time I&#39;m at the hardware store, but neither is really necessary.  In other words, I&#39;m marking this one in the &quot;done&quot; column.</p>
+
+<h2 id="day-10">Day 10</h2>
+
+<p>I rewired the volume control and finally got it working.</p>
+
+<p>Also, a <strong>back</strong>. We can put this one in the done column now.</p>
+
+<p><img src="../a/i/2012/apc/7428884492_8d501ba1b4.jpg" alt=""></p>
+
+        </main>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Music From Outer Space Weird Sound Generator - Build Log | cory chamblin</title>
+  <meta name="author" content="Cory Chamblin">
+  <meta name="description" content="Writings about computer science
+                                    and hobbies by Cory Chamblin">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52771183-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <style>
+    .wrap {
+    width: 90%;
+    max-width: 768px;
+    }
+  </style>
+</head>
+<body>
+	<h1>Music From Outer Space Weird Sound Generator - Build Log</h1>
+        <h3><a href="/">Cory Chamblin</a></h3>
+        <main class="wrap">
+	<h2 id="day-1">Day 1</h2>
+
+<p>The hardware of <a target="_blank" href="http://www.musicfromouterspace.com">Music From Outer Space</a>&#39;s <a target="_blank" href="http://www.musicfromouterspace.com/index.php?MAINTAB=SYNTHDIY&amp;VPW=1024&amp;VPH=500">Weird Sound Generator</a> (henceforth, WSG) is pretty sweet.  I like synths and am interested in building some going forward.  This project is less than $100 all told.  Having finished <a target="_blank" href="http://www.makershed.com/product_p/9780596153748.htm">Make: Electronics</a> and getting my feet a little wet with electronics projects, it seems like a pretty solid second project.</p>
+
+<p>Offered upon the website are several options, from a PCB all the way up to a very expensive fully assembled WSG, and everything between.  Most buy the component kit and faceplate as faceplates are a pain.  I just bought the PCB and picked up all the fiddly bits from Jameco and from my huge supply of Chinese resistors and capacitors.  I haven&#39;t solved the faceplate problem yet, but I have some building to do first.</p>
+
+<p>This is not really day 1, as I&#39;ve spent a few days going over the schematic and reading the theory of operation on the website.  For the most part, this is accessible as synthesizers get, and it&#39;s really easy to understand the nuts and bolts of this.  I&#39;ll briefly go over them in another post.</p>
+
+<p>As I said, the hardware is sweet.  I definitely underestimated how nice the PCB would be.  It&#39;s very neat looking and all the solder holes look like they&#39;re little shiny metal tubes.  It is truly a thing of beauty to a guy who is coming from cheaper kits.</p>
+
+<p>Apologies for the terrible photography.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6316372380_f762059bbf.jpg" alt=""></p>
+
+<p>So at this point I had gotten all the resistors in.  That one brown resistor is a 750K nightmare.  It wasn&#39;t in either of the assortments I had, so I had to special order 50 of them from Thailand.  For $1.  Shipped.  I&#39;m not sure how that works out economically, but I&#39;m alright with it.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6316370076_ba8c817af3.jpg" alt=""></p>
+
+<p>This is how I roll on soldering, and a view of the backside of the board.  You&#39;ll note that I use a cheap set of helping hands I got from Ace for $5 instead of a fancy Panavise, Jr.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6316373770_ab4c8aa82e.jpg" alt=""></p>
+
+<p>Even with very inexpensive chips, it&#39;s better to solder a socket to the board.  It is excruciating to unsolder a 14-pin chip.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6315857331_c1b427574d.jpg" alt=""></p>
+
+<p>I&#39;ve installed the ceramic capacitors here. </p>
+
+<h2 id="day-2">Day 2</h2>
+
+<p>Got the opportunity to solder in the electrolytics and the semiconductors (D1 and D2, Q1 and Q2).  The board is complete.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6327376748_0b5de86a9b.jpg" alt=""></p>
+
+<h2 id="day-3">Day 3</h2>
+
+<p>With the board basically stuffed, I had to build a faceplate.  MFOS sells them for $32 which is way more than I wanted to spend.  Plus I can always use an excuse to flex my DIY skills.</p>
+
+<p>I purchased a 6&quot;x18&quot; piece of steel from Lowe&#39;s for about $5.  They had aluminum in the same size, but it was twice as much and almost certainly not worth it.</p>
+
+<p>First, I had to cut it in half.  I have a metal-cutting blade on my circular saw, but that ended badly.  Ultimately, I clamped it down and cut it with a hacksaw, then filed the rough edge down.  I ended up about 1/16&quot; shorter than my intended 9&quot;, but it&#39;s good enough.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6326627309_329f2e0c41.jpg" alt=""></p>
+
+<p>Fiddling with the knobs and switches to get my layout sheet right in Photoshop.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6326624223_73346fa314.jpg" alt=""></p>
+
+<p>The sheet was printed and stuck to the aluminum.  Instead of using proper tools, I marked the holes with a concrete screw and a hammer, then drilled them out into a scrap board.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6327377848_95e7ce8e6c.jpg" alt=""></p>
+
+<p>After filing off the burrs, all the pots and switches fit marvelously.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6326625265_d03dc2f3f1.jpg" alt=""></p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6327377018_eb3ab1cc41.jpg" alt=""></p>
+
+<h2 id="day-4">Day 4</h2>
+
+<p>I wired the faceplate up.  It was one of the more trying parts of this build so far.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6338627377_b250bea55c.jpg" alt=""></p>
+
+<p>At this point, all the faceplate wiring is complete.  That wasn&#39;t so bad, right?</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6338627841_3a29acd880.jpg" alt=""></p>
+
+<p>The beast, realized.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6338627175_f8828753d9.jpg" alt=""></p>
+
+<p>This is the part where I expected dismal failure.  In my experience, electronics projects usually involve 3 or 4 hours of me looking for my stupid mistake.</p>
+
+<p><object height="81" width="100%">
+<param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F27747069" /><param name="allowscriptaccess" value="always" /><embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F27747069" type="application/x-shockwave-flash" width="100%"></embed></object>
+<a href="http://soundcloud.com/chamblin/corys-weird-sound-generator">Cory&#39;s Weird Sound Generator</a> by <a href="http://soundcloud.com/chamblin">chamblin</a></p>
+
+<p>Success!</p>
+
+<p>Unfortunately, in my excitement I forgot to put the fancy cover (that I haven&#39;t made yet) on the panel.  So I have to disassemble the panel, stick the panel cover on, and then hope the pots and switches go back without too much work.  Note to future self: FINISH THE PANEL BEFORE PUTTING STUFF IN IT.</p>
+
+<h2 id="day-5">Day 5</h2>
+
+<p>I finished up the design for the faceplate cover.  My wife has access to a laminator at work, so I&#39;m counting on her to cut out and laminate the piece monday.</p>
+
+<p>My process was basically starting with the mechanical layout in Photoshop and cutting up Ray Wilson&#39;s faceplate for most of the pieces and moving them into place.  It was time consuming but not overly difficult.</p>
+
+<p>At first, I was just planning on using a sheet of construction paper, but I found this textured yellow cardstock among my wife&#39;s scrapbooking supplies and figured it was easier to ask for forgiveness than permission.  I was correct.</p>
+
+<p>This is the result.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6340540143_25f32bca8d.jpg" alt=""></p>
+
+<p>I also started cutting out the case pieces.  I am not a very good woodworker, and am apparently even worse at basic math.  My fudge factor was insufficient on the sides and somehow I ended up with an extra 7/8&quot; on the bottom and top.  I don&#39;t have any pictures of this, so let your imagination fill in the details:</p>
+
+<p>Mark, clamp, cut, cut, cut, curse, give up on project, mark, clamp, cut, measure, throw away piece, mark, cut.  And so on.  And now it&#39;s too dark to fix in my currently unpowered shed, so I&#39;ll have to work it out in the morning.</p>
+
+<h2 id="day-6">Day 6</h2>
+
+<p>I woke up this morning with a lot of project momentum.  Though I couldn&#39;t cut the pieces last night, I marked them (about 3 times before I got it right) so I could go right to cutting this morning.  I zipped through them pretty quickly.  The dowel was particularly annoying because I thought I had a 4&quot; board and I&#39;m giving 1/2&quot; clearance on each side.  So I cut them all to 3&quot;.  Then when I went to check my work (of course, after I had already hand-sawn all 4 pieces), it didn&#39;t work out because I had a 3&quot; board.  D&#39;oh.  Another inch.</p>
+
+<p>Anyway, after a bunch of cutting and sanding, I finally had my pieces.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6340539259_94777819c7.jpg" alt=""></p>
+
+<p>After some pilot holes and another trip to the hardware store to get the correct screws:</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6341288524_69da577bc3.jpg" alt=""></p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6340539665_bd922fdbe5.jpg" alt=""></p>
+
+<p>Of course, there was a knot right on one of my screw holes.  and my pilot hole wasn&#39;t big enough, apparently.  Because I broke a screw trying to drive it.  So now I have half a screw stuck in this thing.  Structurally, it&#39;s not the biggest deal in the world because the posts and faceplate should hold it together.  So ultimately, I&#39;m probably just cutting off the screwhead and super gluing it over the hole.  That side became the &quot;bottom&quot;.</p>
+
+<p>Moment of truth:</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6341290250_f9d58f43cb.jpg" alt=""></p>
+
+<p>It fits!</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6340540909_e1cd739db7.jpg" alt=""></p>
+
+<p>Posts are glued in.</p>
+
+<p>I&#39;ve stained half of it so far, it&#39;s drying now.</p>
+
+<h2 id="day-7">Day 7</h2>
+
+<p>Immense storming today so I was unable to get to the shed to give the case a coat of Polycrylic.  Regardless, I was able to wrap up the staining late last night with flashlights and it looks pretty decent this morning.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6345862353_4451db7a7a.jpg" alt=""></p>
+
+<p>The wife did a great job getting the faceplate cover laminated and perfectly cut edges.  I used 3M Super 77 spray adhesive to attach the cover to the plate.  I hastily shoved the pots through and screwed them on.  The glue wasn&#39;t totally dry (or remotely dry), but it seems like it&#39;s not going to be a disaster.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6345863215_7eaf07b108.jpg" alt=""></p>
+
+<p>Pots are now installed.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6345864799_926c7aa5d6.jpg" alt=""></p>
+
+<p>Reassembling the pots and switches onto the faceplate was not nearly as big of a deal as I thought it would be.  The nest of wires kept everything in approximately the correct place.  The only hiccup was an easily noticed wire that had broken off, which I repaired before hooking it back up.  It still works!</p>
+
+<p>I am in the home stretch on this.  Hopefully, I will have an opportunity to apply the finish tomorrow and find some way to mount the board neatly inside the case.  If I can find a PCI slot cover, that may do exactly the trick.</p>
+
+<p>Also, I have yet to find a back for this thing.  A piece of pegboard or other paneling would be great, but I don&#39;t have any scrap that I&#39;m aware of and I refuse to buy a 4&#39;x6&#39; sheet to use less than a square foot of the material.</p>
+
+<h2 id="day-8">Day 8</h2>
+
+<p>Got this wrapped up (for now) today.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6347711813_9f37ee7026.jpg" alt=""></p>
+
+<p>Battery holder secured here.  This guy was a lucky find in my parts box.  I had one of those regular clippy ones without the base for this and after I&#39;d secured it to the panel I found this one.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6347711503_8bac21b773.jpg" alt=""></p>
+
+<p>Front panel screwed in and secured.</p>
+
+<p>The prologue is that I still haven&#39;t found a back I like.  The board is just kind of hanging out inside the case, which i think is OK for a long time.  There are a lot of wires and it&#39;s very sturdy.  In fact, getting it to move may be the hardest part of installing the back.  I&#39;m sure I&#39;ll come across some scrap paneling at some point and get the back of my dreams.</p>
+
+<p>I highly recommend this project for ease of assembly and awesomeness of sound.</p>
+
+<h2 id="day-9">Day 9</h2>
+
+<p>After wrestling with it for a bit, I finally got a back on this thing, courtesy of my friend Jeremy who donated a piece of an old hollow door.</p>
+
+<p><img src="../a/i/2012/weird-sound-generator/6402870061_16d96b1d72.jpg" alt=""></p>
+
+<p>This completes the Weird Sound Generator.</p>
+
+<p>For now.</p>
+
+        </main>
+</body>
+</html>
