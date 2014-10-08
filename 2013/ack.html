@@ -35,7 +35,22 @@
 
 <p>By default, it recurses through the current directory, looking at all source code files for a match to the input string.  It dutifully reports line numbers and filenames with highlighting.</p>
 
-<script src="https://gist.github.com/chamblin/4e30d2ad3d59495bd899.js" type="text/javascript"></script>
+<pre><code class="prettyprint">metaswitch cchamblin$ ack &quot;class BusinessGroup&quot;
+api/bigrivertelephone/com/BigRiverTelephone/Metaswitch/BusinessGroup.java
+13:public class BusinessGroup extends MetaswitchElement implements WalkableElement{
+
+api/bigrivertelephone/com/BigRiverTelephone/Metaswitch/BusinessGroupLine.java
+9:public class BusinessGroupLine extends SubscriberLine{
+
+api/bigrivertelephone/com/BigRiverTelephone/Metaswitch/BusinessGroupLineCallerIDServices.java
+9:public class BusinessGroupLineCallerIDServices extends CallerIDServices{
+
+api/bigrivertelephone/com/BigRiverTelephone/Metaswitch/BusinessGroupLineCallForwardingServices.java
+11:public class BusinessGroupLineCallForwardingServices extends CallForwardingServices{
+
+api/bigrivertelephone/com/BigRiverTelephone/Metaswitch/BusinessGroupLineFindMeFollowMeRule.java
+9:public class BusinessGroupLineFindMeFollowMeRule extends FindMeFollowMeRule{
+</code></pre>
 
 <p>Installation is available via Homebrew and MacPorts as well as most mainstream package managers, or you can just curl it.</p>
 
